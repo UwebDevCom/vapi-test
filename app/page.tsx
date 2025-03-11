@@ -1,6 +1,5 @@
 // pages/index.tsx
 "use client";
-// @ts-ignore
 
 import { useState, useEffect } from "react";
 import Head from "next/head";
@@ -15,7 +14,6 @@ interface AppState {
     error: string;
     vapiInitialized: boolean;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     vapiInstance: any;
 }
 
@@ -29,7 +27,6 @@ export default function Home() {
         vapiInstance: null,
     });
 
-    // @ts-ignore: baseUrl is not in type definition but is supported
     const vapi = new Vapi({
         apiKey: process.env.NEXT_PUBLIC_VAPI_API_KEY || "",
         baseUrl: "/api/vapi",

@@ -1,4 +1,3 @@
-// @ts-ignore
 const onStart = async (vapi: any) => {
     try {
         // Configure CORS options for the Vapi instance if possible
