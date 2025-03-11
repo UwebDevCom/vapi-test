@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Voice Assistant App with Vapi AI
+
+This is a simple voice assistant app built with Next.js and Vapi AI. It provides a beautiful interface with a single button to start and stop the voice assistant.
+
+## Features
+
+-   Clean, modern UI with a nice-looking button
+-   Dark mode support
+-   Real-time transcription of voice input
+-   Powered by Vapi AI's voice assistant technology
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   Node.js 18.x or later
+-   A Vapi AI account with API keys
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone this repository
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Create a `.env.local` file in the root directory with your Vapi AI API keys:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```
+    NEXT_PUBLIC_VAPI_API_KEY=your-public-key-here
+    NEXT_PUBLIC_VAPI_ASSISTANT_ID=your-assistant-id-here
+    ```
+
+    You can get these keys from your [Vapi AI Dashboard](https://dashboard.vapi.ai/).
+
+4. Run the development server:
+
+    ```bash
+    npm run dev
+    ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
+
+## How to Use
+
+1. Click the microphone button to start the voice assistant.
+2. Speak to the assistant. Your speech will be transcribed in real-time.
+3. The assistant will respond to your queries using Vapi AI's technology.
+4. Click the button again to stop the conversation.
+
+## Deployment
+
+You can deploy this app to Vercel, Netlify, or any other hosting service that supports Next.js applications.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+-   [Vapi AI Documentation](https://docs.vapi.ai/)
+-   [Next.js Documentation](https://nextjs.org/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
