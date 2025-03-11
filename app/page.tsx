@@ -1,5 +1,6 @@
 // pages/index.tsx
 "use client";
+// @ts-ignore
 
 import { useState, useEffect } from "react";
 import Head from "next/head";
@@ -13,6 +14,8 @@ interface AppState {
     response: string;
     error: string;
     vapiInitialized: boolean;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     vapiInstance: any;
 }
 
