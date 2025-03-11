@@ -5,8 +5,19 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Vapi from "@vapi-ai/web";
 import onStart from "./actions/vapiAction";
+
+// Define a proper interface for our app state
+interface AppState {
+    isListening: boolean;
+    transcript: string;
+    response: string;
+    error: string;
+    vapiInitialized: boolean;
+    vapiInstance: any;
+}
+
 export default function Home() {
-    const [state, setState] = useState<any>({
+    const [state, setState] = useState<AppState>({
         isListening: false,
         transcript: "",
         response: "",
@@ -15,8 +26,9 @@ export default function Home() {
         vapiInstance: null,
     });
 
-    const vapi: any = new Vapi({
-        apiKey: process.env.NEXT_PUBLIC_VAPI_API_KEY,
+    // @ts-ignore: baseUrl is not in type definition but is supported
+    const vapi = new Vapi({
+        apiKey: process.env.NEXT_PUBLIC_VAPI_API_KEY || "",
         baseUrl: "/api/vapi",
     } as any);
 

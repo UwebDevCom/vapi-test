@@ -1,3 +1,5 @@
+import Vapi from "@vapi-ai/web";
+
 const onStart = async (vapi: any) => {
     try {
         // Configure CORS options for the Vapi instance if possible
@@ -10,7 +12,7 @@ const onStart = async (vapi: any) => {
         }
 
         const call = await vapi.start(
-            process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID
+            process.env.NEXT_PUBLIC_VAPI_ASSISTANT_ID || ""
         );
         console.log(call);
         return call;
